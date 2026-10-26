@@ -1,5 +1,12 @@
 # Registro Maestro ADESIS WEB
 
+## ADESIS_WEB_V1.1.3_release_HOME1.0_FOOTER_INSTITUCIONAL_20261026
+Antecesora: ADESIS_WEB_V1.1.2_release_HOME1.0_PROYECTOS_VIDRIO_UNICO_20261026.
+Solicitud expresa del titular: retirar de la web institucional online el footer de desarrollo con la identidad de build y el indicador LIVE. Esta instrucción autoriza la excepción a la identificación visual IDMP de esta publicación; la identidad y genealogía quedan en el repositorio.
+Cambio: se elimina exclusivamente el span .idmp y su indicador .idmp-led de index.html y privacy.html. Se conservan copyright, lema y enlaces institucionales. El contenido principal, CSS, JS, favicon e imágenes no cambian.
+Validación: comparación de contenido antes/después y verificación de ambos footers online tras el despliegue.
+Rollback: commit 757b5bbe06e686581821b5c03e94edfd09bdbb07.
+
 ## ADESIS_WEB_V1.1.2_release_HOME1.0_PROYECTOS_VIDRIO_UNICO_20261026
 Antecesora: ADESIS_WEB_V1.1.1_release_HOME1.0_PRIVACIDAD_BLOQUE_UNICO_20261026.
 Solicitud: retirar la capa interior que rodea las tarjetas y conservar el vidrio general de Proyectos.
