@@ -119,3 +119,6 @@ a:focus-visible,.toggle:focus-visible{outline:2px solid #8fe4ff;outline-offset:4
 /* Evitar que el marco de proyectos exceda los márgenes en tablet. */
 @media(min-width:761px) and (max-width:1208px){#proyectos .projects-focus::before,#proyectos .projects-focus::after{left:-18px;right:-18px}}
 
+
+/* V1.1.2 · Un solo panel de vidrio: la grilla conserva su geometría. */
+#proyectos .cards{background:transparent;border-color:transparent}

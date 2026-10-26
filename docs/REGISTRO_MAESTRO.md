@@ -1,5 +1,14 @@
 # Registro Maestro ADESIS WEB
 
+## ADESIS_WEB_V1.1.2_release_HOME1.0_PROYECTOS_VIDRIO_UNICO_20261026
+Antecesora: ADESIS_WEB_V1.1.1_release_HOME1.0_PRIVACIDAD_BLOQUE_UNICO_20261026.
+Solicitud: retirar la capa interior que rodea las tarjetas y conservar el vidrio general de Proyectos.
+Cambio: fondo de #proyectos .cards transparente y borde transparente. Se conserva el ancho del borde para mantener exactamente la geometría de la grilla. El panel .projects-focus y los estilos, imágenes y scripts de las tarjetas se mantienen.
+Favicon verificado: assets/favicon.svg, A blanca sin travesaño y punto azul; enlazado en Home y Privacidad.
+Identidad y LIVE preservados en ambas páginas; CSS con versión de caché 1.1.2.
+Validación: revisión del CSS y comparación de la estructura de tarjetas y del texto de Privacidad con la versión anterior; comprobación visual online tras el despliegue.
+Rollback: commit anterior 3bdf524eac9182d7601438b3bda70b54f5655899.
+
 ## ADESIS_WEB_V1.1.1_release_HOME1.0_PRIVACIDAD_BLOQUE_UNICO_20261026
 Origen: V1.1.1 aprobada por titular el 26/10/2026. Fuente autocontenida SHA-256: 5f71b6f4fd4e9554085e391944cfb5506bfe37b664937c6412f10679fdd0e767.
 Publicación: separación funcional en index.html y privacy.html, estilos y JS extraídos, cinco imágenes originales sin recodificación, favicon y wordmark; identidad release en footer.
