@@ -1,5 +1,31 @@
 # Registro Maestro ADESIS WEB
 
+## ADESIS_WEB_V2.0.0_RELEASE_20261101
+
+Publicación expresamente autorizada por el titular el 2026-11-01, sobre la candidata
+ADESIS_WEB_V2_RC01_20261101 validada en escritorio y móvil.
+Base y rollback: main 5ca9de13ad6caa47d09ef8c00374696d131fa984 (V1.1.3).
+
+Bienvenida: fade desde negro de 1200 ms, Tierra y seis letras con intervalo de
+150 ms y fade individual de 600 ms. El punto azul entra junto con la A.
+Terminada la última S, pausa de 500 ms y transición vertical de 2200 ms al hero.
+La marca conserva tamaño, centrado, espaciado aprobado y posición final.
+Una sola instancia SVG. Escape, scroll, toque, anclas y movimiento reducido permiten
+acceder al contenido; el sitio también conserva su fallback sin JavaScript.
+
+Se mantienen íntegros proyectos, imágenes, scripts originales, contacto y política
+de privacidad de V1.1.3. Footer institucional sin identificación de desarrollo ni LIVE.
+No se modifican CNAME, configuración de dominio ni permisos del repositorio.
+
+Validación previa: 17 blobs base cotejados con GitHub, JavaScript comprobado,
+intro y final naturales, tarjeta de proyecto, privacidad, acceso con ancla,
+escritorio y móvil 390x844 sin desbordamiento horizontal.
+GitHub Pages realiza el despliegue asincrónico al actualizar main.
+
+## Historial hasta V1.1.3
+
+# Registro Maestro ADESIS WEB
+
 ## ADESIS_WEB_V1.1.3_release_HOME1.0_FOOTER_INSTITUCIONAL_20261026
 Antecesora: ADESIS_WEB_V1.1.2_release_HOME1.0_PROYECTOS_VIDRIO_UNICO_20261026.
 Solicitud expresa del titular: retirar de la web institucional online el footer de desarrollo con la identidad de build y el indicador LIVE. Esta instrucción autoriza la excepción a la identificación visual IDMP de esta publicación; la identidad y genealogía quedan en el repositorio.

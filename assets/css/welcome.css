@@ -1,0 +1,35 @@
+:root{
+  --welcome-reveal:1100ms;
+  --welcome-earth-width:max(150%,1500px);
+  --welcome-brand-width:min(calc(100vw - 150px),1120px);
+}
+html{scrollbar-gutter:stable}
+/* The original heading box remains in the document, reserving exactly its space. */
+.hero-wordmark-v10{aspect-ratio:7928/1900;display:flex;align-items:center;justify-content:center}
+.hero-wordmark-v10 .brand-motion{display:block;width:var(--welcome-brand-width);max-width:none;flex-shrink:0;transform-origin:50% 50%;overflow:visible}
+.hero-copy.reveal{opacity:1;transform:none;transition:none}
+.welcome-scene{position:fixed;z-index:80;inset:0;overflow:hidden;pointer-events:none;background:radial-gradient(ellipse at 50% 97%,#07172b 0,transparent 46%),#010309}
+.welcome-scene[hidden]{display:none}
+.welcome-earth{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:var(--welcome-earth-width);max-width:none;height:auto;display:block;mask-image:linear-gradient(to bottom,transparent,#000 24%);-webkit-mask-image:linear-gradient(to bottom,transparent,#000 24%)}
+html:not(.welcome-pending) .welcome-scene{display:none}
+.welcome-curtain{display:none}
+.welcome-pending .welcome-curtain{display:block;position:fixed;inset:0;z-index:120;background:#000;pointer-events:none}
+.welcome-curtain[hidden]{display:none}
+.welcome-pending{overflow:hidden}
+.welcome-pending .hero-copy{position:relative;z-index:90}
+.welcome-pending .brand-motion{will-change:transform;filter:drop-shadow(0 0 24px #406fa21a)}
+.welcome-pending:not(.welcome-ready) .brand-motion{visibility:hidden}
+.welcome-pending .brand-letter{opacity:0}
+body>header,.hero-copy>:not(h1),main>section:not(#inicio),body>footer{transition:opacity var(--welcome-reveal) ease}
+.welcome-pending:not(.welcome-revealing) body>header,
+.welcome-pending:not(.welcome-revealing) .hero-copy>:not(h1),
+.welcome-pending:not(.welcome-revealing) main>section:not(#inicio),
+.welcome-pending:not(.welcome-revealing) body>footer{opacity:0;pointer-events:none}
+/* Preserve the live blue background and particles; give only the light a cyan tint. */
+.glow{background:radial-gradient(circle at 50% 31%,rgba(73,171,244,.29) 0%,rgba(50,141,225,.16) 18%,rgba(46,140,255,.06) 34%,transparent 50%)}
+@media(max-width:760px){:root{--welcome-brand-width:calc(100vw - 48px)}}
+@media(prefers-reduced-motion:reduce){
+ .welcome-scene{display:none!important}
+ .brand-motion{transform:none!important;visibility:visible!important;filter:none!important}
+ body>header,.hero-copy>:not(h1),main>section:not(#inicio),body>footer{transition:none}
+}
