@@ -1,0 +1,11 @@
+/* C014: page hierarchy only; card geometry and engine remain frozen. */
+:root{--phase-gap:72px;--phase-heading-size:clamp(21px,2.4vw,29px);--phase-rule:#7baecf33;--phase-text:#d4e3ef}
+.projects-hero h1{max-width:1050px;font-size:clamp(44px,5.8vw,76px);line-height:1.06;text-wrap:balance}
+.project-phases{padding-top:28px}
+.project-phase+.project-phase{margin-top:var(--phase-gap)}
+.phase-heading{display:flex;align-items:center;gap:22px;margin:0 0 26px;color:var(--phase-text);font-size:var(--phase-heading-size);font-weight:300;letter-spacing:-.025em;line-height:1.25}
+.phase-heading::after{content:"";flex:1;min-width:25px;height:1px;background:linear-gradient(90deg,var(--phase-rule),transparent)}
+@media(max-width:760px){:root{--phase-gap:48px}.projects-hero h1{max-width:340px;font-size:44px}.project-phases{padding-top:25px}.phase-heading{gap:16px;margin-bottom:21px}}
+
+.fileforge h3{font-size:27px;font-weight:350;letter-spacing:-.035em;margin:0 0 7px}
+@media(max-width:760px){.fileforge h3{font-size:25px}}

@@ -1,0 +1,10 @@
+/* One-way Home -> Proyectos transition, independent of the welcome/cards. */
+:root{--nav-in:520ms;--nav-hold:70ms}
+html.nav-veil::after{
+ content:"";position:fixed;inset:0;z-index:2147483647;
+ background:#000;opacity:0;pointer-events:none;
+}
+html.nav-arrival::after{opacity:1;pointer-events:auto}
+html.nav-arrival.nav-reveal::after{animation:adesis-from-black var(--nav-in) cubic-bezier(.2,.6,.25,1) both;pointer-events:none}
+@keyframes adesis-from-black{from{opacity:1}to{opacity:0}}
+@media(prefers-reduced-motion:reduce){html.nav-veil::after{animation:none!important;opacity:0!important;pointer-events:none!important}}

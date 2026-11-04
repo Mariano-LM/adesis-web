@@ -1,0 +1,59 @@
+/* C014: satin blue-grey frosted material, between C013 and the earlier grey. Geometry and motion remain frozen. */
+:root{
+ --space-void:#01050b;
+ --surface-top:rgba(22,42,60,.75);
+ --surface-base:rgba(9,22,36,.75);
+ --cast-shadow:rgba(0,0,0,.78);
+ --surface-grain:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22180%22%20height%3D%22180%22%20viewBox%3D%220%200%20180%20180%22%3E%3Cfilter%20id%3D%22g%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%22.84%22%20numOctaves%3D%223%22%20stitchTiles%3D%22stitch%22%2F%3E%3CfeColorMatrix%20type%3D%22saturate%22%20values%3D%220%22%2F%3E%3C%2Ffilter%3E%3Cpath%20fill%3D%22%23fff%22%20filter%3D%22url%28%23g%29%22%20d%3D%22M0%200h180v180H0z%22%2F%3E%3C%2Fsvg%3E");
+}
+body{background:var(--space-void)}
+body::before{background:
+ radial-gradient(ellipse at 88% 8%,#15374d3d 0%,transparent 46%),
+ radial-gradient(ellipse at 2% 68%,#102c4633 0%,transparent 42%),
+ linear-gradient(165deg,#030b14 0%,#01060d 54%,#030a13 100%)}
+.glow{inset:0;animation:none;background:
+ radial-gradient(ellipse at 18% 29%,#1839511c,transparent 32%),
+ radial-gradient(ellipse at 89% 72%,#16486418,transparent 37%)}
+.site-header{background:#020a13c9}
+.projects-hero::after{background:
+ linear-gradient(0deg,#01060d 0%,#01060d00 33%),
+ linear-gradient(90deg,#020711e8 0%,#03101d66 42%,transparent 78%)}
+.project-earth{filter:brightness(.86)}
+
+/* Apply the cast shadow after clipping the cover, so it falls onto the image.
+   The wrapper has no padding, border, transform or layout contribution. */
+.shutter-depth{position:absolute;inset:0;z-index:2;pointer-events:none;
+ filter:drop-shadow(10px 4px 13px var(--cast-shadow))}
+.project-card .shutter{
+ background:#07111f;
+}
+.project-card .shutter::before{
+ content:"";position:absolute;inset:0;clip-path:inherit;z-index:1;
+ transform:translateX(-1px);
+ background:
+ radial-gradient(ellipse at var(--spot-x) var(--spot-y),#9abbd51a,transparent 54%),
+ linear-gradient(125deg,#c5dce810 0%,#a8c7dc06 22%,transparent 44%),
+ linear-gradient(112deg,var(--surface-top) 0%,rgba(15,32,49,.75) 37%,var(--surface-base) 77%,rgba(6,17,30,.75) 100%);
+}
+.project-card .shutter::after{
+ background-image:var(--surface-grain);
+ background-size:180px 180px;opacity:.075;mix-blend-mode:screen;z-index:2;
+}
+.project-card{box-shadow:
+ 0 18px 40px #0008,
+ 0 2px 5px #0009,
+ 0 0 36px #2b70990a}
+.project-card:hover{box-shadow:0 24px 54px #000a,0 3px 6px #0009,0 0 36px #3c8ca414}
+.project-card::after{
+ content:"";position:absolute;inset:0;z-index:6;border-radius:inherit;
+ pointer-events:none;box-shadow:inset 0 1px 0 #c8eafa30,inset 0 -2px 6px #0008;
+}
+@media(max-width:760px){.shutter-depth{filter:drop-shadow(7px 3px 9px var(--cast-shadow))}}
+
+/* 75% satin blue-grey tint over a dimmed, defocused sample: subtle transmission.
+   A sample avoids backdrop-filter being isolated by the depth wrapper filter. */
+.project-card .shutter .frost-image{
+ pointer-events:none;user-select:none;opacity:1!important;
+ filter:blur(14px) saturate(.65) brightness(.4)!important;
+ transform:scale(1.025);z-index:0;
+}

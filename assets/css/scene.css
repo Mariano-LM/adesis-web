@@ -1,0 +1,5 @@
+:root{--scene-header:72px;--scene-strength:.45}.identity-field{position:fixed;inset:var(--scene-header) 0 0;z-index:-2;pointer-events:none;overflow:hidden;contain:strict;background:#020711}.panorama-scene{display:block;width:100%;height:auto;max-width:none;transform:translate3d(0,var(--scene-offset,0px),0);will-change:transform}body::before{background:#020711}.glow,.project-earth{display:none}.projects-hero::after{background:linear-gradient(90deg,#020711b8,transparent 85%)}.site-header{background:#020912e6}#particles{opacity:.18}@media(prefers-reduced-motion:reduce){.panorama-scene{will-change:auto}}
+@supports(width:1cqh){.identity-field{container-type:size}.panorama-scene{--travel-limit:max(0px,calc(100cqw * 3 - 100cqh));transform:translate3d(0,clamp(calc(0px - var(--travel-limit)),var(--scene-offset,0px),0px),0)}}
+
+/* C018: scenic intensity only; layout and normalized travel are unchanged. */
+.panorama-scene{opacity:var(--scene-strength)}
