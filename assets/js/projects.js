@@ -71,6 +71,8 @@ async function open(c){
  if(c.el.dataset.state!=='closed')return;
  const version=++c.version,moving=[c.title,c.subtitle,c.rule],old=moving.map(el=>el.getBoundingClientRect()),styles=getComputedStyle(c.el),base=styles.getPropertyValue('--base-clip').trim(),opened=styles.getPropertyValue('--open-clip').trim();
  c.button.hidden=true;c.button.setAttribute('aria-expanded','true');c.el.classList.add('expanded');c.el.dataset.state='opening';c.phase.textContent='Abriendo '+c.title.textContent+'.';
+ // Recompute the paragraph shape after the desktop opening button leaves the flow.
+ if(matchMedia('(min-width:1200px) and (hover:hover) and (pointer:fine)').matches)fitFlow(c);
  if(!reduced.matches&&typeof c.shutter.animate==='function'){
   motion(c,base,opened,'grayscale(1) saturate(0) brightness(.48)','grayscale(0) saturate(1) brightness(1)',.76,1,moving,old);
   try{await Promise.all(c.animations.map(a=>a.finished));}catch{return;}

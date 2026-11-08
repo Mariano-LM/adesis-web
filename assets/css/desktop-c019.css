@@ -1,0 +1,67 @@
+/* T001: typography trial on the published C018 site. Touch/mobile rules remain intact. */
+@media (min-width:761px) and (hover:hover) and (pointer:fine){
+ header nav a,.primary-nav a{font-size:16px}
+ .project-card .title-stack h3{font-size:34px}
+ .project-card .subtitle{font-size:16px}
+ .project-card .copy{font-size:18px}
+ .project-card .ver-proyecto{font-size:13px}
+}
+@media (min-width:1001px) and (max-width:1199px) and (hover:hover) and (pointer:fine){
+ .project-card .title-stack h3{font-size:40px}
+ .project-card .subtitle{font-size:18px}
+ .project-card .copy{font-size:20px;line-height:1.45}
+ .project-card .ver-proyecto{font-size:14px}
+}
+@media (min-width:1200px) and (hover:hover) and (pointer:fine){
+ .project-card .title-stack h3{font-size:clamp(36px,3.6vw,46px)}
+ .project-card .subtitle{font-size:19px}
+ .project-card .copy{font-size:22px;line-height:1.45}
+ .project-card .ver-proyecto{font-size:14px}
+}
+
+/* T002: two desktop cards per row, on the accepted typography trial T001. */
+@media (min-width:1200px) and (hover:hover) and (pointer:fine){
+ .project-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+ .project-card,.project-card[data-app=xray]{height:640px;container-type:inline-size}
+ .project-card .title-stack h3{font-size:clamp(32px,6.4cqw,38px)}
+ .project-card .subtitle{font-size:18px}
+}
+
+/* T004: the open diagonal is centered at 50% (57% top / 43% bottom). */
+@media (min-width:1200px) and (hover:hover) and (pointer:fine){
+ .project-card,.project-card[data-app=xray]{
+  height:428.8px;overflow:clip;--title-top:6%;--heading-width:46%;
+  --open-top:.57;--open-bottom:.43;
+  --open-clip:polygon(0 0,57% 0,43% 100%,0 100%);
+ }
+ .project-card .copy{height:auto!important;display:block;margin-top:12px;font-size:17px;line-height:1.35}
+ .project-card .subtitle{font-size:16px}
+ .project-card .rule{margin-top:12px}
+ .project-card[data-app=xray] .title-stack h3{font-size:30px}
+}
+
+/* T005: desktop height reduced a further 15% from T004 (428.8 × .85). */
+@media (min-width:1200px) and (hover:hover) and (pointer:fine){
+ .project-card,.project-card[data-app=xray]{height:364.48px}
+ .project-card[data-app=xray]{--title-top:5%}
+ .project-card[data-app=xray] .title-stack h3{font-size:27px}
+ .project-card[data-app=xray] .subtitle{font-size:15px}
+ .project-card[data-app=xray] .copy{font-size:16px;line-height:1.3;margin-top:10px}
+ .project-card[data-app=xray] .rule{margin-top:8px}
+}
+
+/* T006: one continuous grid with all six projects. */
+.project-list>.fileforge{margin-top:0}
+@media (min-width:1200px) and (hover:hover) and (pointer:fine){
+ .project-list>.fileforge{
+  box-sizing:border-box;min-width:0;height:364.48px;
+  grid-template-columns:55px minmax(0,1fr);gap:20px;
+  padding:36px;align-content:center;
+ }
+ .project-list>.fileforge h3{font-size:36px;font-weight:400;letter-spacing:-.035em;line-height:1.05;margin:0 0 11px}
+ .project-list>.fileforge p:not(.eyebrow){font-size:17px;line-height:1.35}
+ .project-list>.fileforge .development{grid-column:2}
+}
+
+/* IDMP-2026 001: selectable identity and cyclic LIVE indicator. */
+.build-footer{display:flex;align-items:center;gap:7px;padding:0 0 16px;font:10px/1.4 ui-monospace,monospace;color:#7890a8;overflow-wrap:anywhere;user-select:text}.build-footer code{font:inherit}.build-live{flex:0 0 5px;width:5px;height:5px;border-radius:50%;background:#65d4ff;animation:build-live-cycle 2.4s step-end infinite}@keyframes build-live-cycle{0%,100%{visibility:visible}50%{visibility:hidden}}

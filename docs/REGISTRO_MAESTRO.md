@@ -144,3 +144,19 @@ Validación final: ver `QA_V1.0.8.json`. Ajustes posteriores al primer pase: sep
 - IDMP: identidad, LIVE, registro heredado y hash de antecesora conservados. HTML autocontenido y paquete modular corresponden a la misma build. V1.1.0 se preserva sin modificaciones.
 - Estado: candidate local; sin publicación ni cambios externos.
 
+
+## Publicación C019 — 2026-11-08
+
+**Identidad:** `ADESIS-Web_2.0.1_fix_C019_20261108`.
+**Antecesora online:** C018, commit `4ba0f62bd3c3607bbf3d560f3b79c0cb3e03da8e`, con Contact01 (sólo Dirección y Soporte).
+**Fuente aprobada:** `ADESIS_WEB_C018_T006_SEIS_PROYECTOS_JUNTOS.html`, SHA-256 `789a40d8e0bf615dc6db82f5d51fcdcbaec01504d09bf280c7c06f8d779be4e3`.
+
+Genealogía de esta iteración: T001 (2026-11-06), tipografía de escritorio y menú; T002 (2026-11-06), dos tarjetas por fila; T003 (2026-11-08), altura 640 → 428.8 px; T004 (2026-11-08), diagonal centrada al 50%, descripción 17 px y recálculo del flujo al abrir; T005 (2026-11-08), altura 364.48 px y ajuste del texto largo de X-Ray; T006 (2026-11-08), seis proyectos en una grilla y retiro de encabezados de fases. El titular aprobó publicar T006 en esta conversación.
+
+- Escritorio amplio (mínimo 1200 px, puntero fino): tres filas de dos, incluida FileForge.
+- Móvil: una columna; geometría y tipografía de las cinco tarjetas interactivas conservadas.
+- Material original, capturas, parallax, bienvenida y transiciones heredados de C018. Contact01 preservado.
+- Fuente modular equivalente al HTML aprobado. Sólo cambia la estructura de agrupación, CSS específico de escritorio, recálculo del párrafo al abrir y footer de identificación.
+- IDMP: identidad seleccionable/copiable, punto LIVE ON/OFF y este registro acumulado dentro del paquete.
+- Validación previa T006: seis elementos, una grilla, igualdad de tamaños y fuentes móviles; apertura y descripciones verificadas en T004/T005, incluyendo X-Ray a 1200 px.
+- Reversión: restaurar el commit antecedente indicado arriba.
