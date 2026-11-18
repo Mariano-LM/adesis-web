@@ -160,3 +160,14 @@ Genealogía de esta iteración: T001 (2026-11-06), tipografía de escritorio y m
 - IDMP: identidad seleccionable/copiable, punto LIVE ON/OFF y este registro acumulado dentro del paquete.
 - Validación previa T006: seis elementos, una grilla, igualdad de tamaños y fuentes móviles; apertura y descripciones verificadas en T004/T005, incluyendo X-Ray a 1200 px.
 - Reversión: restaurar el commit antecedente indicado arriba.
+
+## Promoción C020 — 2026-11-18
+
+**Identidad de publicación:** `ADESIS-Web_2.0.2_fix_C020_20261118`.
+**Vista previa aprobada:** `ADESIS-Web_C020_autocontenido.html`.
+**Base pública C019 con ajuste institucional:** `3e7adbfc2376fe12e50470e91287900de84c29b6`. Los archivos públicos afectados coinciden byte a byte con esta base.
+
+- Privacidad institucional: declara GitHub Pages para alojamiento, Google Cloud DNS para el dominio y Google Workspace para el correo. Elimina la referencia a Cloudflare y la cláusula sobre SW Tornado. La política de la aplicación se preparará como documento propio.
+- Por indicación del titular, retira el identificador de build y el punto LIVE de Inicio, Proyectos y Privacidad. Conserva el pie institucional. Esta decisión aplica a la presentación pública de ADESIS Web. La identidad y la genealogía se registran aquí y en Git.
+- Validación local: comprobación estructural de Inicio, Proyectos y Privacidad, enlaces del pie, alcance y proveedores de la política, y preservación del CSS de Proyectos.
+- Reversión: recuperar el commit base indicado arriba. El titular autorizó publicar esta revisión después de revisar la vista previa autocontenida.

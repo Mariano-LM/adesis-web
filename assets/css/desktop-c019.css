@@ -62,6 +62,3 @@
  .project-list>.fileforge p:not(.eyebrow){font-size:17px;line-height:1.35}
  .project-list>.fileforge .development{grid-column:2}
 }
-
-/* IDMP-2026 001: selectable identity and cyclic LIVE indicator. */
-.build-footer{display:flex;align-items:center;gap:7px;padding:0 0 16px;font:10px/1.4 ui-monospace,monospace;color:#7890a8;overflow-wrap:anywhere;user-select:text}.build-footer code{font:inherit}.build-live{flex:0 0 5px;width:5px;height:5px;border-radius:50%;background:#65d4ff;animation:build-live-cycle 2.4s step-end infinite}@keyframes build-live-cycle{0%,100%{visibility:visible}50%{visibility:hidden}}
